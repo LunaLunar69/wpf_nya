@@ -1,0 +1,1 @@
+si hay que ser minero romper el pico de hierro 
