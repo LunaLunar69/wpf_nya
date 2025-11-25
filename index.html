@@ -31,6 +31,9 @@
     <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
+    <!-- Supabase JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
     <!-- Script JS -->
     <script src="main.js"></script>
 
@@ -186,6 +189,43 @@
             </ul>
             <div class="clearfix"></div>
         </div>
+        <!-- Sección de opiniones -->
+    <section id="opiniones">
+        <div class="container">
+            <h2 class="subheader">Deja tu opinión del juego</h2>
+
+            <form id="opinion-form">
+                <div class="form-group">
+                    <label for="nickname">Nickname</label>
+                    <input type="text" id="nickname" name="nickname" required placeholder="Tu nick en el juego">
+                </div>
+
+                <div class="form-group">
+                    <label for="operador">Operador favorito</label>
+                    <select id="operador" name="operador" required>
+                        <option value="">Selecciona uno</option>
+                        <option value="Blitz">Blitz</option>
+                        <option value="Fuze">Fuze</option>
+                        <option value="Azami">Azami</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="comentario">Comentario</label>
+                    <textarea id="comentario" name="comentario" rows="3" placeholder="¿Qué opinas de Rainbow Six Siege?"></textarea>
+                </div>
+
+                <button type="submit" id="btn-enviar">Enviar opinión</button>
+                <p id="opinion-msg" class="form-msg"></p>
+            </form>
+
+            <h3 class="subheader">Opiniones recientes</h3>
+            <div id="opiniones-lista">
+                <!-- Aquí se van a pintar las opiniones desde JS -->
+            </div>
+        </div>
+    </section>
     </footer>
 </body>
 </html>
